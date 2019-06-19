@@ -1,0 +1,53 @@
+$breakpoint-mobile: 768px;
+// Breakpoints
+@mixin breakpoint($point) {
+  /* Between 0 and 767px */
+  @if $point == mobile {
+    /* stylelint-disable-next-line */
+    @media only screen and (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+
+  /* Between 0 and 1000px */
+  @if $point == mobile_tablet {
+    /* stylelint-disable-next-line */
+    @media only screen and (max-width: 1000 - 1) {
+      @content;
+    }
+  }
+
+  /* Between 768px and up */
+  @if $point == tablet {
+    /* stylelint-disable-next-line */
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  /* ONLY Between 768px and 1000px */
+  @if $point == tablet_only {
+    /* stylelint-disable */
+    @media only screen and (min-width: 768px) and
+    (max-width: 1000 - 1) {
+      @content;
+    }
+    /* stylelint-enable */
+  }
+
+  /* Between 1001px and 1200px */
+  @if $point == desktop {
+    /* stylelint-disable-next-line */
+    @media only screen and (min-width: 1000px) {
+      @content;
+    }
+  }
+
+  /* At least 1200px */
+  @if $point == widescreen {
+    /* stylelint-disable-next-line */
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}

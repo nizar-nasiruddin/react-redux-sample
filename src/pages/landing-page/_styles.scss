@@ -1,0 +1,22 @@
+.landing-page {
+  .container {
+    margin: 10rem 6rem;
+
+    @include breakpoint(mobile) {
+      margin: 10rem 1rem;
+    }
+  }
+
+  .card {
+    .card-action-area {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+
+      .card-icon {
+        color: $primaryColor;
+        font-size: 5rem;
+      }
+    }
+  }
+}

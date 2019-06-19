@@ -1,0 +1,5 @@
+.hidden-mobile {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
