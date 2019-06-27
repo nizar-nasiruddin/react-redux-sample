@@ -140,5 +140,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.16.0",
+    "redux-mock-store": "^1.5.3"
   }
 }
