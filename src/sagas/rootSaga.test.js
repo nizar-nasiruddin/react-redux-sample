@@ -16,5 +16,5 @@ describe('Supplier Fetch Flow', () => {
     expect(generator.throw('Error').value)
       .toEqual(put({ type: 'SUPPLIER_FETCH_FAILED'}));
   });
-  
+
 });
